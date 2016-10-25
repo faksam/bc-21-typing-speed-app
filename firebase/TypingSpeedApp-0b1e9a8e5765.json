@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "typing-speed-app",
+  "private_key_id": "0b1e9a8e576599b84c23b90a4ea284f99c46e40f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC3PK37rp72lB1Y\nEZzNM3OTONt38bCsKeLW4PbuyZ0Gx48gqEaPic/2apXnYLEOGGZinyyt6pn9WXsP\nTKIEHkALwZ2qHCyV/jO4Q/m9J+mia2YO9vlExEgg3pObIxv+e3Jco4ETfiSb9S5m\n3S5Kh3WRJnkDr8DqNNyI7dXsCYHHzeTvhvujKrFLVGH+OuUojWAR8x83GSBSKmOd\npccduclOCDiAphbFzHin6tIfW8UcgqpANDRQGTNpgKCk5seUAmWcogJoZuL7krmt\nwPeed0+HFFu2qtkB1idfjN94UsgKsM7KZCLfxbIe5GM1Ua1aELB5itaV+RT3g6E0\nPUpLV/A9AgMBAAECggEAVCB23KuibiE4i7uiWw/5Syl6kcoUTCb6757foGhOQNOU\nYfEAXFxwb3kmE9Hv2EHZmAPulna0dn4DotWTOQLOctdU1MoUqlTIWBxVZ8QQXzKh\n69L2RN09JGIsMLjg3Gi+68thsppionvh7vYzj6I7lwWr38ZsctsMOY3Afpsqy5l0\nT6WY5gssv8mz3f6eh4xNJMuChvJQKOB9U7WI4JAxlGfuUB6cQg4nxtH64yhco3mS\noy0oYh2rb0xS3E9Bz132jdDs5tFbxYrdaYu3SjaNNZ4tEp3rIhUZ99q/TERhfEc0\nT0ftabJ7EUpDTKGgpqjv6MoCKTSDEE2RPDFgnpXAwQKBgQDcTllv3q1CoptdXSBw\n2xrQUs91mGk1l5CfB3xa0Q2stPBNIeNdNQZBMXtpsdtQjgRvZO+OcQF5MgYcCNND\nghdfF654KCqr8pxqln2TaQ/QrIHQcPsVsG+fG7KbIJsuUVFHLxjmZUzvdc+9TOuu\nAKYmZP6FE6PQSUEmlTrfhrTabQKBgQDU7NDNmQNTbMvf/M7UdaZRoNPykHrik5gS\ntMiavo1yhCI3cvfP6R5puFujOdsEZVRCLyJY2GnTaNGum9ZGDJgL9ThUk1cNkUGh\nqI4K98O2DYhanb7TDKczrY8/880GpcpIxS1d73eoBgmKPYoe06fK9PD2Bz2jlw2A\nxkcP3AXLEQKBgG4xEjMOYgMOaj+MsQlBzmucv//Ft/oCUWf5yo1yOzDDX950sNCS\nEQrSwTPgrh3gqv88sUXB6EbCaqPjFiiSDTaXFcEr9gwDUZFOrIjq5+osHtIvcKcs\nlOg0ZmWJLZVBPzInsICs8opjlwDMVKW31WMm6NePN0SbH2c5BTWAnz0RAoGAAMHK\nyEBYA67qVqSGc7jrW3Tv6/fZh/6wVriv0eUFibewi3PsL6ALjKKsKLtm7PATSZzz\nSU+TqL3BqRZCv8MBs2EuzxYrBBBVJGb+Akn5Nyd7KZ9P814jJgri7H5IZ1Klknao\n/6F/UmibFhO77vofqZgPV0CVVoSN9rw9um+00ZECgYB2nBUW9kdXKwJvxjTrAmkI\nheCjiWJj4SMxKkBiI0bHd0bpWbOPOECqpL6VyIHWLLC3g5SFNvkcJPcPKaRzqKnj\n9SkAEMFNnU4b/TiqSGqxem+b/tij60yssQ0F9zPEilVHjS1v8r2PKQjhfgGPt/QU\nMfQ8sev4zPsWJLW8kpT3ig==\n-----END PRIVATE KEY-----\n",
+  "client_email": "typing-speed@typing-speed-app.iam.gserviceaccount.com",
+  "client_id": "100454687252587368652",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/typing-speed%40typing-speed-app.iam.gserviceaccount.com"
+}
