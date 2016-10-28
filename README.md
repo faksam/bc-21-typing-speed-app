@@ -10,4 +10,6 @@ Requirements
 **Extra Credit**
 - Use `firebase` to persist data (as a datastore)
 
+A deployed version. https://bc21typingspeed.herokuapp.com/
+
 
