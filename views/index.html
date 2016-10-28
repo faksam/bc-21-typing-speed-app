@@ -1,17 +1,133 @@
 <!DOCTYPE html>
 <html>
-<title>Typing Speed</title>
+<head>
+	<title>Typing Speed</title>
+	<script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+
+  <link rel="stylesheet" href="public/stylesheets/style.css"/>
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="public/stylesheets/css/materialize.min.css"  media="screen,projection"/>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+</head>
+
 <body>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="public/js/materialize.min.js"></script>
+<header>
+</header>
+<div class="container" style="padding-top:20px;">
+  <div class="row">
+      <a href="./" class="brand-logo  blue-text text-darken-2" style="background-position: top left; padding: 25px 10px 0 25px;"><img src="public\images\logo0.png">Typing speed</a>
 
-<p>A function is triggered when the user is pressing a key in the input field.</p>
+  <div style=" float: right;margin-top: 35px;">
+    <button id="btnLogin0" class="btn waves-effect waves-light blue" style="border-radius: 25px;" onclick="showLoginDiv()" >Login</button>&nbsp;&nbsp;&nbsp;
+		<button id="btnSignUp0" style="border-radius: 25px;" class="btn waves-effect waves-light purple" onclick="showSignupDiv()" >Sign Up</button>
 
-<input type="text" onkeypress="myFunction()">
+		<button id="btnLogOut" style="border-radius: 25px;  display:none;" class="btn waves-effect waves-light orange darken-2" >Log Out</button>
 
-<script>
-function myFunction() {
-    alert("You pressed a key inside the input field");
-}
-</script>
+	</div>
+  </div>
+</div>
+<div class="container" style="padding-top:35px;">
 
+    <div class="row">
+<div class="col s7">
+<div id="welcomeDiv">
+  <div class="row">
+  <h5 id="speedResult0" style="color:#1976d2 ; font-weight: bold;">How fast can you type?</h5>
+  <h6 id = "speedResult1"  style="color:#1976d2 ; font-weight: bold;">Not so fast....</h6>
+   <br>
+    <img src="public\images\timer0.png">
+   <button id="takeTest" class="btn waves-effect waves-light green" >Take a test<i class="material-icons right"></i>
+	 </button>
+   <br>
+  </div>
+
+</div>
+   <div id="loginDiv" class="row" style="display: none;" >
+   <div class="form">
+
+    <h1>User Login</h1>
+      <input type="text" required  name="txtEmail" id="txtEmail" placeholder="Email" class="txtfield" tabindex="1">
+
+      <input type="password" required  name="txtPassword" id="txtPassword" placeholder="Password" class="txtfield" tabindex="2">
+
+      <button id="btnLogin" class="btn waves-effect waves-light blue" style="border-radius: 25px;" >Login<i class="material-icons right">send</i></button>&nbsp;&nbsp;&nbsp;
+         <button class="btn waves-effect waves-light red"   onclick="showLoginDiv()" >Cancel<i class="material-icons right">cancel</i></button>
+
+    </div>
+  </div>
+  <div id="signupDiv" class="row" style="display: none;" >
+    <div>
+      <h1>Sign Up</h1>
+	      <input type="text" required name="txtUsername_SU" id="txtUsername_SU" placeholder="Username" class="txtfield" tabindex="2">
+
+		      <input type="text" required  name="txtEmail_SU" id="txtEmail_SU" placeholder="Email" class="txtfield" tabindex="3">
+
+		      <input type="password" required  name="txtPassword_SU" id="txtPassword_SU" placeholder="Password" class="txtfield" tabindex="4">
+
+      <button class="btn waves-effect waves-light blue" id = "btnSignUp" style="border-radius: 25px;" type="submit">Sign Up<i class="material-icons right">send</i></button>&nbsp;&nbsp;&nbsp;
+      <button class="btn waves-effect waves-light red" onclick="showSignupDiv()" >Cancel<i class="material-icons right">cancel</i></button>
+
+  </div>
+  </div>
+    <div id="typingDiv" class="row" style="display: none;">
+
+		<h5 id = "displayTime" style="color:#1976d2;display:none;font-weight: bold;text-align: center;"></h5>
+    <div class="card hoverable small">
+          <div class="card-image">
+            <span class="card-title">Card Title</span>
+          </div>
+          <div class="card-content">
+            <h5 id = "paragraph" style="color:#1976d2; font-weight: bold;">Press a key on the keyboard in the input field to get the Unicode character code of the pressed key.</h5>
+          </div>
+        </div>
+    <div >
+
+
+				<i id="typingNotify" class="material-icons prefix">mode_edit</i>
+      <p id ="Notification">Start typing in the text area below</p>
+      <div class="progress">
+      <div class="determinate" id="typedProgress" style="width: 0%"></div>
+  </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea class="materialize-textarea"  id="typedString" rows="4" name="phone" onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off onkeypress="myFunction(event)" required style="font-weight: bold;font-size: 25px; " placeholder = "Start typing"></textarea>
+        <!-- <p id="currentChar"></p> -->
+        </div>
+      </div>
+
+      <div class="row">
+         <button class="btn waves-effect waves-light blue" disabled="disabled" id="btnSubmitTyping">Submit<i class="material-icons right">send</i></button>&nbsp;&nbsp;&nbsp;
+         <button class="btn waves-effect waves-light red"  onClick="showTypingDiv()" >Cancel<i class="material-icons right">cancel</i></button>
+      </div>
+    </div>
+        </div>
+  </div>
+  <div class="col s4 push-s2" style="color:#1976d2 ;">
+		 <ul id="leaderBoardList" class="collection with-header">
+			 <li class="collection-header"><h4>Top 20</h4></li>
+		 </ul>
+  </div>
+  </div>
+<!-- Typying Speed js -->
+<script type="text/javascript" src="/public/js/typingSpeed.js"></script>
+<!--Firebase DB javascripts-->
+  <script type="text/javascript" src="public/js/firebaseDB.js"></script
+
+<!--
+Login Modal
+ -->
+ <div class="col s7">
+</div>
+
+</div>
 </body>
 </html>

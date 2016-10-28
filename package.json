@@ -1,0 +1,34 @@
+{
+  "name": "bc-21-typing-speed-app",
+  "version": "1.0.0",
+  "description": "A typing speed application",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "~1.15.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "firebase": "^3.5.2",
+    "jade": "~1.11.0",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faksam/bc-21-typing-speed-app.git"
+  },
+  "keywords": [
+    "typing"
+  ],
+  "author": "Samuel Fakunle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/faksam/bc-21-typing-speed-app/issues"
+  },
+  "homepage": "https://github.com/faksam/bc-21-typing-speed-app#readme"
+}

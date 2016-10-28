@@ -7,7 +7,6 @@ var bodyParser = require('body-parser');
 var firebase = require("firebase");
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
 
 var app = express();
 // Initialize the app with a service account, granting admin privileges
@@ -29,7 +28,7 @@ app.listen(port);
 console.log("Listening on port : " + port);
 
 // Require static assets from public folder
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static(path.join(__dirname + '/public')));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -43,10 +42,10 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('public',express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
+//app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -56,9 +55,11 @@ app.use(function(req, res, next) {
 });
 
 // error handlers
+/*
 app.use("*",function(req,res){
   res.sendFile(path + "404.html");
 });
+*/
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
